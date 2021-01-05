@@ -28,6 +28,7 @@ jobs:
           echo "Tags: ${{ github.event.inputs.tags }}" 
           echo "GITHUB_REF_NAME=$GITHUB_REF_NAME"
           echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF} | tr / -)"
+          echo "bn: ${GITHUB_REF##*/}"
           bash .github/workflows/test.sh 
 
 
