@@ -26,6 +26,7 @@ jobs:
       - name: Invoke Lambda
         run: | 
           echo "Tags: ${{ github.event.inputs.tags }}" 
+          echo ${BRANCH_NAME}
           bash .github/workflows/test.sh 
 
 
